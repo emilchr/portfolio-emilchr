@@ -9,31 +9,50 @@
 </head>
 <body>
     <header>
+        <div class="toggle-mode"></div> <!-- Insert toggle button here -->
         <section class="logo-container"><h1 id="logo">Emil Westrum</h1></section>
         <nav>
         <ul class="navigation-items">
             <li class="navigation-item"><a href="#">About me</a></li>
             <li class="navigation-item"><a href="./contact.html">Contact</a></li>
+            <li class="navigation-item"><a href="#">Another button</a></li>
         </ul>
         </nav>
     </header>
     <main>            
         <section id="about-me">
             <div class="about-me-container">
-                <h2 id="my-name">Emil Westrum</h2>
+                <h2>About me</h2>
                 <div class="about-me-text-container"></div> <!-- About me here-->
-                <div class="about-me-img-container"></div> <!-- Profile pic here -->
+                <div class="about-me-img-container"><img src="./resources/images/emilbildeBW.png" /></div> <!-- Profile pic here -->
             </div>
         </section>
         <section id="projects">
             <div class="projects-container">
-                <h2 id="project-title">Projects</h2>
-                <div class="projects-text-container"></div> <!-- Project here -->
+                <h2>Projects</h2><!-- Project here -->
+                <details class="project" >
+                    <summary class="project-title">
+                        <h3>Project Title</h3>
+                    </summary>
+                    <p class="project-description">Description of the project.</p>
+                </details>
+                <details class="project">
+                    <summary class="project-title">
+                        <h3>Project Title</h3>
+                    </summary>
+                    <p class="project-description">Description of the project.</p>
+                </details>
+                <details class="project">
+                    <summary class="project-title">
+                        <h3>Project Title</h3>
+                    </summary>
+                    <p class="project-description">Description of the project.</p>
+                </details> 
             </div>
         </section>
         <section id="skills">
             <div class="skills-container">
-                <h2 id="skills-title">Skills</h2>
+                <h2>Skills</h2>
                 <div class="skill-img-container"></div> <!-- Skills here -->
             </div>
         </section>
