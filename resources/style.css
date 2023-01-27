@@ -1,0 +1,115 @@
+html{
+    font-size: 16px;
+    color: rgb(35, 35, 35)
+}
+
+h1{
+    font-size: 5em;
+}
+
+h2{
+    font-size: 2em;
+}
+
+.project-title h3{
+    display: inline;
+    font-size: 1.25em;  
+}
+
+
+
+.layout-container{
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-width: 50em;
+    display: grid;
+    grid-template-columns: 50em;
+    grid-template-rows: 
+    auto
+    1fr
+    5em;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+  
+    justify-content: center;
+    justify-items: center;
+    
+    
+
+    border: 3px solid green;
+}
+
+header{
+    grid-area: header;
+    border: 3px solid green;
+    justify-items: center;
+}
+nav{
+    justify-self: center;
+}
+main{
+    grid-area: main;
+    
+}
+.navigation-items{
+    
+    display: inline-flex;
+    
+}
+.navigation-item{
+    margin: 0 0.75em;
+}
+.about-me-container{
+    display: grid;
+    min-width: 55em;
+    grid-template-columns: 1fr 1fr;
+    
+    justify-items: flex-end;
+    
+    border: 3px solid green;
+}
+.about-me-text-container{
+
+    
+}
+.about-me-img-container{
+    
+    
+}
+
+.about-me-img-container img{
+    width: 20em;
+    border: 3em solid rgb(35, 35, 35);
+    border-radius: 15em;
+
+}
+
+.projects-container{
+    border: 3px solid green;
+}
+.skills-container{
+    border: 3px solid green;
+    
+}
+.skill-img-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 4em;
+    color: rgb(70, 70, 70);
+}
+
+footer{
+    grid-area: footer;
+    min-width: 100%;
+    min-height: 100%;
+    place-self: center;
+    
+    border: 3px solid green;
+}
+footer span{
+    
+}

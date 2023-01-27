@@ -4,26 +4,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emil Westrum - Portfolio</title>
+    
+    <link rel="stylesheet" href="./resources/reset.css" />
     <link rel="stylesheet" href="./resources/style.css" />
+
+    <script src="https://kit.fontawesome.com/cde9c0ef30.js" crossorigin="anonymous"></script>
     <script src="./resources/app.js" type="javascript" defer></script>
+
 </head>
 <body>
+<div class="layout-container">
     <header>
-        <div class="toggle-mode"></div> <!-- Insert toggle button here -->
+        <div class="toggle-mode"><div class="toggle-button"></div></div> <!-- Insert toggle button here -->
         <section class="logo-container"><h1 id="logo">Emil Westrum</h1></section>
         <nav>
-        <ul class="navigation-items">
-            <li class="navigation-item"><a href="#">About me</a></li>
-            <li class="navigation-item"><a href="./contact.html">Contact</a></li>
-            <li class="navigation-item"><a href="#">Another button</a></li>
+        <div class="navigation-items">
+            <div class="navigation-item"><a href="#">About me</a></div>
+            <div class="navigation-item"><a href="./contact.html">Contact</a></div>
+            <div class="navigation-item"><a href="#">Another button</a></div>
         </ul>
         </nav>
     </header>
     <main>            
         <section id="about-me">
             <div class="about-me-container">
-                <h2>About me</h2>
-                <div class="about-me-text-container"></div> <!-- About me here-->
+                
+                <div class="about-me-text-container">
+                    <h2><i class="fa-solid fa-user"></i>About me</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum impedit nemo eius magni illum vero autem quas alias ea nisi mollitia voluptate ad quaerat porro a, aut, soluta ipsam earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quos praesentium temporibus cum. Accusantium veritatis ab, veniam, facilis architecto temporibus officiis earum ut consequatur possimus quaerat aliquam. Soluta, officiis sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptates, provident, minima nobis quo vero, aperiam inventore repellat hic nesciunt quis itaque dolorum praesentium iste illum rerum assumenda. Maiores, tenetur.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor consequatur dicta autem minima necessitatibus dolorum reiciendis. Placeat labore voluptatum accusamus eius, libero repudiandae odio tempora, minus, cupiditate omnis deserunt doloribus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit commodi quia unde dolorum illo quisquam rem quis, dolorem non aliquid quod recusandae ab rerum cupiditate enim est tempore saepe velit.</p></div> <!-- About me here-->
                 <div class="about-me-img-container"><img src="./resources/images/emilbildeBW.png" /></div> <!-- Profile pic here -->
             </div>
         </section>
@@ -53,13 +62,23 @@
         <section id="skills">
             <div class="skills-container">
                 <h2>Skills</h2>
-                <div class="skill-img-container"></div> <!-- Skills here -->
+                <div class="skill-img-container">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-square-js"></i>
+                    <i class="fa-brands fa-chrome"></i>
+                    <i class="fa-brands fa-golang"></i>
+                    <i class="fa-solid fa-terminal"></i>
+                    <i class="fa-brands fa-git"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div> <!-- Skills here -->
             </div>
         </section>
 
     </main>
     <footer>
-        
+        <span>Footer text bla bla bla</span>
     </footer>
+</div>
 </body>
 </html>
