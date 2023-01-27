@@ -3,6 +3,12 @@ html{
     color: rgb(35, 35, 35)
 }
 
+a:link {
+    text-decoration: underline;
+}
+a:hover{
+    color:grey;
+}
 h1{
     font-size: 5em;
 }
@@ -18,14 +24,10 @@ h2{
 main h2 i{
     margin-right: 0.75em;
 }
-/* .fractional-background{
-    display: flex;
-    z-index: -10;
-    background-color: aqua;
-    height: 100vh;
-    width: 100px;
-}*/
+
+
 .toggle-mode{
+    position: relative;
     display: flex;
     justify-content: flex-end;
 }
@@ -39,6 +41,7 @@ main h2 i{
     border-radius: 2em;
 }
 .toggle-button .bullet{
+
     margin-left: 0.25em;   
     width: 0.75em;
     height: 0.75em;
@@ -61,8 +64,16 @@ main h2 i{
     background-color: green;
     border-radius: 1em;
 }
-
+.fractional-background{
+    
+    position: fixed;
+    background-color: rgb(245, 245, 245);
+    transform: rotate(25deg);
+    height: 900%;
+    width: 730%;     
+}
 .layout-container{
+    position: relative;
     min-height: 100vh;
     min-height: 100dvh;
     min-width: 50em;
