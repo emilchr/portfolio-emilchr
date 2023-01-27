@@ -15,8 +15,52 @@ h2{
     display: inline;
     font-size: 1.25em;  
 }
-
-
+main h2 i{
+    margin-right: 0.75em;
+}
+/* .fractional-background{
+    display: flex;
+    z-index: -10;
+    background-color: aqua;
+    height: 100vh;
+    width: 100px;
+}*/
+.toggle-mode{
+    display: flex;
+    justify-content: flex-end;
+}
+.toggle-button {
+    display: flex;
+    align-items: center;
+    margin: 0.25em 0.75em 0 0.25em;
+    height: 1em;
+    width: 3em;
+    background-color: lightgray;
+    border-radius: 2em;
+}
+.toggle-button .bullet{
+    margin-left: 0.25em;   
+    width: 0.75em;
+    height: 0.75em;
+    background-color: gray;
+    border-radius: 1em;
+}
+.toggle-button .bullet:hover{
+    margin-left: 0.25em;   
+    width: 0.75em;
+    height: 0.75em;
+    background-color: green;
+    border-radius: 1em;
+}
+.toggle-button .bullet:active{
+    display: flex;
+    align-items: flex-end;
+    margin-left: 2em;   
+    width: 0.75em;
+    height: 0.75em;
+    background-color: green;
+    border-radius: 1em;
+}
 
 .layout-container{
     min-height: 100vh;
@@ -25,17 +69,16 @@ h2{
     display: grid;
     grid-template-columns: 50em;
     grid-template-rows: 
-    auto
-    1fr
-    5em;
+        auto
+        1fr
+        5em;
     grid-template-areas: 
         "header"
         "main"
         "footer";
-  
     justify-content: center;
     justify-items: center;
-    
+    row-gap: 1em;
     
 
     border: 3px solid green;
@@ -44,10 +87,17 @@ h2{
 header{
     grid-area: header;
     border: 3px solid green;
+    display: grid;
     justify-items: center;
+    align-items: center;
+    min-width: 100%;
 }
 nav{
-    justify-self: center;
+    margin-top: 1em;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    
 }
 main{
     grid-area: main;
@@ -65,12 +115,13 @@ main{
     display: grid;
     min-width: 55em;
     grid-template-columns: 1fr 1fr;
-    
     justify-items: flex-end;
+    align-items: center;
     
     border: 3px solid green;
 }
-.about-me-text-container{
+.about-me-text-container p{
+    padding: 0.75em;
 }
 .about-me-img-container{    
 }
@@ -79,14 +130,22 @@ main{
     width: 20em;
     border: 3em solid rgb(35, 35, 35);
     border-radius: 15em;
-
 }
 
 .projects-container{
     border: 3px solid green;
+    margin-top: 1em;
 }
+.projects-container details{
+    padding-top: 0.25em;
+}
+.project-title{
+    padding: 0.25em;
+}
+
 .skills-container{
     border: 3px solid green;
+    margin-top: 1em;
     
 }
 .skill-img-container{
@@ -96,9 +155,14 @@ main{
     flex-wrap: wrap;
     font-size: 4em;
     color: rgb(70, 70, 70);
+    padding-top: 0.25em;
 }
 
+
 footer{
+    display: grid;
+    align-items: center;
+    justify-items: center;
     grid-area: footer;
     min-width: 100%;
     min-height: 100%;
