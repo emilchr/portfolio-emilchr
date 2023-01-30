@@ -2,7 +2,7 @@ html{
     font-size: 16px;
     color: rgb(35, 35, 35);
     scroll-behavior: smooth;
-}
+    background: linear-gradient(140deg, rgba(2,0,36,0) 38%, rgba(0,189,255,1) 100%);}
 
 a:link {
     text-decoration: underline;
@@ -237,7 +237,7 @@ footer{
         max-width: 200em;
     }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
     .fractional-background{
         position: fixed;
         background-color: rgb(245, 245, 245);
@@ -246,5 +246,35 @@ footer{
         max-height: 370em;
         min-width: 250em;
         max-width: 200em;
+    }
+    .layout-container{
+        max-width: 768px;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+    header{
+        max-width: 300px;
+    }
+    .about-me-container{
+  
+    }
+    .about-me-img-container img{
+        width: 20%;
+        border: 1em solid;
+    }
+    .projects-container{
+
+    }
+    .skills-container{
+   
+    }
+    .skill-img-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 0.25em;
+        
     }
 }
