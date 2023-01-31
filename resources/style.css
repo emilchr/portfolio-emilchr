@@ -2,7 +2,7 @@ html{
     font-size: 16px;
     color: rgb(35, 35, 35);
     scroll-behavior: smooth;
-    background: linear-gradient(140deg, rgba(2,0,36,0) 38%, rgba(0,189,255,1) 100%);}
+    background: linear-gradient(140deg, rgba(2,0,36,0) 38%, rgb(0, 189, 255) 100%);}
 
 a:link {
     text-decoration: underline;
@@ -137,31 +137,48 @@ nav .navigation-items{
     margin: 0.25em;
     display: inline-flex;
 }
-nav .navigation-item{
-    margin: 0 0.75em;
-}
 nav .navigation-item a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
-    text-align: center;
-    background-color: #ccc;
-    height: 2.5em; 
-    border-radius: 1.5em;
-    width: 6em;
-    background: linear-gradient(180deg, rgb(245, 244, 244), 30%, rgb(207, 207, 207));
-    box-shadow:  1px 3px 10px rgb(221, 221, 221);
-
-}
-nav .navigation-item a:hover{
-    background-color: #ccc;
     color: rgb(35, 35, 35);
 }
-nav .navigation-item a:active{
-    background: linear-gradient(0deg, rgb(245, 244, 244), 30%, rgb(207, 207, 207));
+nav .navigation-item{
+    margin: 0 0.75em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    text-align: center;
+    padding: 0.25em; 
+    width: 5em;
+    background: var(--background-color);
+    z-index: 1;
 
+    --background-color: rgb(247, 247, 247);
 }
+.navigation-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    border-left: 3px solid rgba(0, 187, 255, 0.342);
+    border-bottom: 4px solid rgba(0, 187, 255, 0.342);
+    z-index: -1;
+    transition: transform 0.15s ease-in-out;
+    
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.navigation-item:hover::before,
+.navigation-item:focus::before,
+.navigation-item:active::before{
+    transform: scaleX(1);
+    
+}
+
 /* Main content*/
 main{
     grid-area: main;
@@ -176,27 +193,56 @@ main{
     align-items: center;
     
 }
-.about-me-text-container p{
+.about-me-text-container, .contact-container p{
     line-height: normal;
     padding: 0.75em;
 }
-
+.contact-container{
+    display: flex;
+    flex-direction: column;
+}
+.so-me-container{
+    display: flex;
+    flex-direction: column;
+}
+.so-me{
+    font-size: 2em;
+    color: rgb(70, 70, 70);
+    margin: 0.25em;
+    padding-left: 10%;
+    
+}
+.so-me a{
+    text-decoration: none;
+}
+.so-me i{
+    margin-right: 0.5em;
+}
 .about-me-img-container img{
     width: 20em;
-    border: 3em solid rgb(35, 35, 35);
+    border: 2em solid rgba(0, 187, 255, 0.199);
     border-radius: 15em;
 }
 
 .projects-container{
     margin-top: 1em;
-}
-.projects-container details{
-    padding-top: 0.25em;
+    padding-left: 40%;
 }
 .project-title{
     padding: 0.25em;
 }
-
+.projects-container details{
+    padding-top: 0.25em;
+    padding-bottom: 0.75em;
+}
+.project{
+    
+}
+.projects-container img {
+    width: 90%;
+    max-width: 400px;
+    margin: 0.50em 0;
+}
 .skills-container{
     margin-top: 1em;
 }
@@ -218,7 +264,7 @@ footer{
     justify-items: center;
     min-width: 100%;
     min-height: 100%;
-    padding-bottom: 1em;
+    margin-bottom: 1em;
     place-self: center;   
 }
 
@@ -273,6 +319,9 @@ footer{
         flex-direction: column;
         align-items: center;
     }
+    nav .navigation-items{
+        margin: 0;
+    }
     main{
         display: flex;
         flex: 1;    
@@ -289,7 +338,6 @@ footer{
         min-width: 350px;
         align-items: center;
         justify-content: center;
-        
     }
     .about-me-img-container{
         display: flex;     
@@ -297,13 +345,11 @@ footer{
     }
     .about-me-img-container img{
         width: 35%;
-        border: 1em solid;
+        border: 1em solid rgba(0, 187, 255, 0.199);
     }
     .projects-container{
-
-    }
-    .skills-container{
    
+        padding-left: 0.35em;
     }
     .skill-img-container{
         display: flex;
@@ -320,6 +366,5 @@ footer{
         justify-content: center; 
         align-items: flex-end;
         height: 2em;
-        
     }
 }
