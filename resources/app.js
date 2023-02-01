@@ -65,16 +65,16 @@ const contactPopUp = () => { // shows or hides contact modal
         contactButton.style.borderBottom = "4px solid rgba(0, 187, 255, 0.342)";
     } else{
         contactModal.style.display = 'none';
-        contactButton.style.borderLeft = "0";
-        contactButton.style.borderBottom = "0";
+        contactButton.style.borderLeft = "3px solid var(--background-color)";
+        contactButton.style.borderBottom = "4px solid var(--background-color)";
     }
 }
 
 const contactPopUpIsTrue = () =>{
     if (contactPopUp){
         contactModal.style.display = 'none';
-        contactButton.style.borderLeft = "0";
-        contactButton.style.borderBottom = "0";
+        contactButton.style.borderLeft = "3px solid var(--background-color)";
+        contactButton.style.borderBottom = "4px solid var(--background-color)";
     }
 }
 contactButton.addEventListener('click', contactPopUp);
