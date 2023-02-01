@@ -235,6 +235,8 @@ nav .navigation-item_dark{/* dark mode*/
     width: 5em;
     background: var(--background-color);
     z-index: 1;
+    border-left: 3px solid var(--background-color);
+    border-bottom: 4px solid var(--background-color);
 
     --background-color: rgb(44, 44, 44);/* dark mode*/
 }
@@ -348,8 +350,19 @@ main{
     font-size: 1.25em;  
 }
 .projects-container details{
-    padding-top: 0.25em;
+    padding-top: 0.55em;
     padding-bottom: 0.75em;
+}
+details > summary{
+    list-style-type: none;
+    cursor: pointer;
+}
+details > summary::before {
+    content: url(./images/right.png);
+
+}
+details[open] > summary::before {
+    content: url(./images/down.png);
 }
 .projects-container img {
     width: 90%;
