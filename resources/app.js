@@ -8,7 +8,7 @@ let toggleButton = document.getElementById('toggle');
 let i;
 
 const darkMode = () => {
-    e.preventDefault();
+     // enable function on mobile devices
     fractionalBackground.className = 'fractional-background_dark';
     toggleMode.className = 'toggle-mode_dark';
     layoutContainer.className = 'layout-container_dark dark_text';
