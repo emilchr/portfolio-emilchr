@@ -4,23 +4,43 @@ let layoutContainer = document.getElementById('dark_layout');
 let navItem = document.getElementsByClassName('navigation-item');
 let contactModal = document.getElementById('contact');
 
+let checkbox = document.getElementById('toggle');
+
 let contactButton = document.getElementById('contact-button');
 let toggleButton = document.getElementById('toggle');
 
-let i;
+checkbox.checked = false; // resets checkbox each refresh
 
+let i;
 const darkMode = () => {
-    fractionalBackground.className = 'fractional-background_dark';
-    toggleMode.className = 'toggle-mode_dark';
-    layoutContainer.className = 'layout-container_dark dark_text';
-    contactModal.className = 'contact_dark'
-    for (i = 0; i < navItem.length; ){
-        navItem[i].className = 'navigation-item_dark dark_text';
-    };
-    i++
+    if (checkbox.checked === true){
+        fractionalBackground.className = 'fractional-background_dark';
+        toggleMode.className = 'toggle-mode_dark';
+        layoutContainer.className = 'layout-container_dark dark_text';
+        contactModal.className = 'contact_dark'
+        navItem = document.getElementsByClassName('navigation-item')
+
+        for (i = 0; i < navItem.length;){
+            navItem[i].className = 'navigation-item_dark dark_text';
+        };
+        i++
+        
+    } else{
+        fractionalBackground.className = 'fractional-background';
+        toggleMode.className = 'toggle-mode';
+        layoutContainer.className = 'layout-container';
+        contactModal.className = 'contact';
+        navItem = document.getElementsByClassName('navigation-item_dark');
+
+        for (i = 0; i < navItem.length;){
+            navItem[i].className = 'navigation-item';
+        };
+        i++
+    }  
+    return;
 }
 
-toggleButton.addEventListener('change', darkMode);
+toggleButton.addEventListener('click', darkMode); //toggles darkMode
 
 // Calculates how old I am and inserts it in innerHTML.
 let age;
@@ -35,8 +55,9 @@ if (dateToday.getMonth() <= birthday.getMonth() && dateToday.getDate() <= birthd
 
 document.getElementById('years-old').innerHTML = age; // Prints age to index.html
 
-const contactPopUp = () => {
-    
+
+// Contact modal
+const contactPopUp = () => { // shows or hides contact modal
     if(contactModal.style.display === 'none'){
         contactModal.style.display = 'block';
     } else{
@@ -45,3 +66,4 @@ const contactPopUp = () => {
 }
 
 contactButton.addEventListener('click', contactPopUp);
+
