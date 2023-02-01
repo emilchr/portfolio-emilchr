@@ -5,12 +5,14 @@ let navItem = document.getElementsByClassName('navigation-item');
 
 let toggleButton = document.getElementById('toggle');
 
+let i;
+
 const darkMode = () => {
     fractionalBackground.className = 'fractional-background_dark';
     toggleMode.className = 'toggle-mode_dark';
     layoutContainer.className = 'layout-container_dark dark_text';
     
-    for (let i = 0; i < navItem.length; ){
+    for (i = 0; i < navItem.length; ){
         navItem[i].className = 'navigation-item_dark dark_text';
     };
     i++
