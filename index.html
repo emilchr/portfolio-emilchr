@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,26 +10,24 @@
     <link rel="stylesheet" id="mode" href="./resources/style.css" />
 
     <script src="https://kit.fontawesome.com/cde9c0ef30.js" crossorigin="anonymous"></script>
-    <script src="./resources/app.js" type="javascript" defer></script>
+    <script type="text/javascript" src="./resources/app.js" defer></script>
 </head>
 <body>
     
-    <div class="fractional-background"></div>
-    <!-- Insert toggle button here -->
-<div class="toggle-mode">
-    <label class="switch">
-        <input type="checkbox">
+    <div id="dark_fractional" class="fractional-background"></div>
+<div id="dark_toggle" class="toggle-mode">
+    <label class="switch" for="toggle">
+        <input type="checkbox" id="toggle">
         <span class="slider"></span>
       </label>
 </div>
-<div class="layout-container">
-    <header>
-         
+<div id="dark_layout" class="layout-container">
+    <header>      
         <section class="logo-container"><h1 id="logo">Emil Westrum</h1></section>
         <nav>
         <div class="navigation-items">
-            <div class="navigation-item"><a href="#">About me</a></div>
-            <div class="navigation-item"><a href="./contact.html">Contact</a></div>
+            <div id="dark_nav-item" class="navigation-item"><a href="#">About me</a></div>
+            <div id="dark_nav-item" class="navigation-item"><a href="#">Contact</a></div>
         </ul>
         </nav>
     </header>

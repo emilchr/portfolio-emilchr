@@ -1,9 +1,19 @@
-const toggleMode = () => {
-    const toggle = document.body.getElementsByClassName("slider");
-    const style = document.getElementById("mode");
+let fractionalBackground = document.getElementById('dark_fractional');
+let toggleMode = document.getElementById('dark_toggle');
+let layoutContainer = document.getElementById('dark_layout');
+let navItem = document.getElementsByClassName('navigation-item');
 
-        toggle.addEventListener('click', function{
-            style.href = './resources/style_dark.css';
-        })
+let toggleButton = document.getElementById('toggle');
 
+const darkMode = () => {
+    fractionalBackground.className = 'fractional-background_dark';
+    toggleMode.className = 'toggle-mode_dark';
+    layoutContainer.className = 'layout-container_dark dark_text';
+    
+    for (let i = 0; i < navItem.length; ){
+        navItem[i].className = 'navigation-item_dark dark_text';
+    };
+    i++
 }
+
+toggleButton.addEventListener('change', darkMode);

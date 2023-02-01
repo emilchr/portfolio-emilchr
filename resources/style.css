@@ -1,8 +1,9 @@
 html{
     font-size: 16px;
-    color: rgb(35, 35, 35);
+    
     scroll-behavior: smooth;
-    background: linear-gradient(140deg, rgba(2,0,36,0) 38%, rgb(0, 189, 255) 100%);}
+    
+}
 
 a:link {
     text-decoration: underline;
@@ -18,22 +19,33 @@ h2{
     font-size: 2em;
     margin-top: 0.75em;
 }
-
-.project-title h3{
-    display: inline;
-    font-size: 1.25em;  
-}
 main h2 i{
     margin-right: 0.75em;
+}
+i{
     color: rgb(70, 70, 70);
 }
+.dark_text,
+.dark_text i{
+    color: rgb(235, 235, 235);/* dark mode*/
+}
+.dark_text a:hover{
+    color:rgb(56, 56, 56);/* dark mode*/
+}
 
-/* togglebutton */
+/* toggle button */
 .toggle-mode{
     position: relative;
     display: flex;
     justify-content: flex-end;
     height: 2em;
+}
+.toggle-mode_dark{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    height: 2em;
+    background-color: rgb(24, 24, 24);
 }
 
 /* Hides default checkbox */
@@ -41,16 +53,15 @@ main h2 i{
     opacity: 0;
     width: 0;
     height: 0;
-  }
+}
 
 .switch {
     position: relative;
     display: inline-block;
     margin: 0.75em 1em;
     width: 2.5em;
-    height: 1em;
-    
-  }
+    height: 1em;   
+}
 .slider {  
   position: absolute;
   cursor: pointer;
@@ -98,6 +109,15 @@ main h2 i{
     min-width: 250em;
     max-width: 300em;
 }
+.fractional-background_dark{/* dark mode*/
+    position: fixed;
+    background-color: rgb(24, 24, 24);/* dark mode*/
+    transform: rotate(25deg);
+    min-height: 500em;
+    max-height: 700em;
+    min-width: 250em;
+    max-width: 300em;
+}
 .layout-container{
     position: relative;
     min-height: 100vh;
@@ -116,8 +136,30 @@ main h2 i{
     justify-content: center;
     justify-items: center;
     row-gap: 1em;
+    background: linear-gradient(140deg, rgba(2,0,36,0) 38%, rgb(0, 189, 255) 100%);
+    color: rgb(35, 35, 35);
 }
-
+.layout-container_dark{/* dark mode*/
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-width: 50em;
+    display: grid;
+    grid-template-columns: 50em;
+    grid-template-rows: 
+        auto
+        1fr
+        5em;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    justify-content: center;
+    justify-items: center;
+    row-gap: 1em;
+    background: linear-gradient(140deg, rgb(24, 24, 24) 38%, rgba(0, 187, 255, 0.918) 100%);/* dark mode*/
+    color: rgb(235, 235, 235); /* dark mode*/
+}
 header{
     grid-area: header;
     display: grid;
@@ -141,6 +183,7 @@ nav .navigation-item a{
     text-decoration: none;
     color: rgb(35, 35, 35);
 }
+
 nav .navigation-item{
     margin: 0 0.75em;
     position: relative;
@@ -179,6 +222,50 @@ nav .navigation-item{
     
 }
 
+nav .navigation-item_dark{/* dark mode*/
+    margin: 0 0.75em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    text-align: center;
+    padding: 0.5em 0.25em; 
+    width: 5em;
+    background: var(--background-color);
+    z-index: 1;
+
+    --background-color: rgb(44, 44, 44);/* dark mode*/
+}
+nav .navigation-item_dark a{/* dark mode*/
+    text-decoration: none;
+    color: rgb(235, 235, 235);/* dark mode*/
+}
+nav .navigation-item_dark a:hover{
+    color: rgb(235, 235, 235);
+}
+.navigation-item_dark::before{/* dark mode*/
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    border-left: 3px solid rgba(0, 187, 255, 0.342);
+    border-bottom: 4px solid rgba(0, 187, 255, 0.342);
+    z-index: -1;
+    transition: transform 0.15s ease-in-out;
+    
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.navigation-item_dark:hover::before,
+.navigation-item_dark:focus::before,
+.navigation-item_dark:active::before{/* dark mode*/
+    transform: scaleX(1);
+    
+}
 /* Main content*/
 main{
     grid-area: main;
@@ -207,10 +294,8 @@ main{
 }
 .so-me{
     font-size: 2em;
-    color: rgb(70, 70, 70);
     margin: 0.25em;
     padding-left: 10%;
-    
 }
 .so-me a{
     text-decoration: none;
@@ -223,20 +308,20 @@ main{
     border: 2em solid rgba(0, 187, 255, 0.199);
     border-radius: 15em;
 }
-
 .projects-container{
     margin-top: 1em;
-    padding-left: 40%;
+    padding-left: 20%;
 }
 .project-title{
     padding: 0.25em;
 }
+.project-title h3{
+    display: inline;
+    font-size: 1.25em;  
+}
 .projects-container details{
     padding-top: 0.25em;
     padding-bottom: 0.75em;
-}
-.project{
-    
 }
 .projects-container img {
     width: 90%;
@@ -274,9 +359,12 @@ footer{
 
 @media only screen and (max-width: 2100px) {
     .fractional-background{
-        position: fixed;
-        background-color: rgb(245, 245, 245);
-        transform: rotate(25deg);
+        min-height: 400em;
+        max-height: 500em;
+        min-width: 250em;
+        max-width: 300em;
+    }
+    .fractional-background_dark{ /* dark mode */
         min-height: 400em;
         max-height: 500em;
         min-width: 250em;
@@ -285,9 +373,12 @@ footer{
 }
 @media only screen and (max-width: 1200px) {
     .fractional-background{
-        position: fixed;
-        background-color: rgb(245, 245, 245);
-        transform: rotate(25deg);
+        min-height: 300em;
+        max-height: 400em;
+        min-width: 250em;
+        max-width: 200em;
+    }
+    .fractional-background_dark{ /* dark mode */
         min-height: 300em;
         max-height: 400em;
         min-width: 250em;
@@ -296,9 +387,6 @@ footer{
 }
 @media only screen and (max-width: 810px) {
     .fractional-background{
-        position: fixed;
-        background-color: rgb(245, 245, 245);
-        transform: rotate(25deg);
         min-height: 220em;
         max-height: 370em;
         min-width: 250em;
@@ -311,8 +399,22 @@ footer{
         display: flex;
         flex-direction: column;
         padding: 0.25em;
-        justify-content: flex-start; 
-           
+        justify-content: flex-start;       
+    }
+    .fractional-background_dark{ /* dark mode */
+        min-height: 220em;
+        max-height: 370em;
+        min-width: 250em;
+        max-width: 200em;
+    }
+    .layout-container_dark{ /* dark mode */
+        max-width: 768px;
+        min-width: 350px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 0.25em;
+        justify-content: flex-start;       
     }
     header{
         display: flex;
@@ -348,7 +450,6 @@ footer{
         border: 1em solid rgba(0, 187, 255, 0.199);
     }
     .projects-container{
-   
         padding-left: 0.35em;
     }
     .skill-img-container{
@@ -360,6 +461,11 @@ footer{
     .skills-container i {
         font-size: 0.75em;
         padding: 0.35em 0.35em;
+    }
+    .so-me{
+        font-size: 1.5em;
+        margin: 0.25em;
+        padding-left: 0;
     }
     footer{
         display: flex;
