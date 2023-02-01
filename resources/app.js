@@ -7,6 +7,7 @@ let contactModal = document.getElementById('contact');
 let checkbox = document.getElementById('toggle');
 
 let contactButton = document.getElementById('contact-button');
+let aboutButton = document.getElementById('about-button');
 let toggleButton = document.getElementById('toggle');
 
 checkbox.checked = false; // resets checkbox each refresh
@@ -60,10 +61,22 @@ document.getElementById('years-old').innerHTML = age; // Prints age to index.htm
 const contactPopUp = () => { // shows or hides contact modal
     if(contactModal.style.display === 'none'){
         contactModal.style.display = 'block';
+        contactButton.style.borderLeft = "3px solid rgba(0, 187, 255, 0.342)";
+        contactButton.style.borderBottom = "4px solid rgba(0, 187, 255, 0.342)";
     } else{
         contactModal.style.display = 'none';
+        contactButton.style.borderLeft = "0";
+        contactButton.style.borderBottom = "0";
     }
 }
 
+const contactPopUpIsTrue = () =>{
+    if (contactPopUp){
+        contactModal.style.display = 'none';
+        contactButton.style.borderLeft = "0";
+        contactButton.style.borderBottom = "0";
+    }
+}
 contactButton.addEventListener('click', contactPopUp);
+aboutButton.addEventListener('click', contactPopUpIsTrue);
 
