@@ -284,6 +284,32 @@ main{
     line-height: normal;
     padding: 0.75em;
 }
+.contact{
+    display: none;
+    position: fixed;
+    min-width: 300px;
+    width: 40em;
+    max-width: 500px;
+    background-color: rgb(115, 222, 255);
+    box-shadow: 30px 30px 60px rgba(0, 120, 156, 0.514);
+    padding: 0.25em;
+    
+}
+.contact_dark{
+    display: none;
+    position: fixed;
+    min-width: 300px;
+    width: 40em;
+    max-width: 500px;
+    background-color: rgb(24, 24, 24);
+    box-shadow: 30px 30px 60px rgba(0, 120, 156, 0.514);
+    padding: 0.25em;
+    color: #ccc;
+}
+.contact_dark a{/* dark mode*/
+        color: rgb(235, 235, 235);/* dark mode*/
+    }
+
 .contact-container{
     display: flex;
     flex-direction: column;
@@ -429,7 +455,16 @@ footer{
         flex: 1;    
         flex-direction: column; 
     }
-   
+    .contact{
+        position: relative;
+        min-width: 310px;
+        max-width: 340px; 
+    }
+    .contact_dark{
+        position: relative;
+        min-width: 310px;
+        max-width: 340px; 
+    }
     .logo-container h1{
         text-align: center;
         }
