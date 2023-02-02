@@ -4,6 +4,8 @@ let layoutContainer = document.getElementById('dark_layout');
 let navItem = document.getElementsByClassName('navigation-item');
 let contactModal = document.getElementById('contact');
 
+let profilePic = document.getElementById('profile-picture');
+
 let checkbox = document.getElementById('toggle');
 
 let contactButton = document.getElementById('contact-button');
@@ -81,3 +83,13 @@ const contactPopUpIsTrue = () =>{
 contactButton.addEventListener('click', contactPopUp);
 aboutButton.addEventListener('click', contactPopUpIsTrue);
 
+const colorPicture = () => {
+    profilePic.src = "./resources/images/emilbilde.png"
+}
+const bwPicture = () => {
+    profilePic.src = "./resources/images/emilbildeBW.png"
+}
+
+
+profilePic.addEventListener('mouseenter', colorPicture)
+profilePic.addEventListener('mouseleave', bwPicture)
