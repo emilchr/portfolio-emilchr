@@ -204,9 +204,9 @@ nav .navigation-item{
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: -3px;
     right: 0;
-    bottom: 0;
+    bottom: -4px;
     
     border-left: 3px solid rgba(0, 187, 255, 0.342);
     border-bottom: 4px solid rgba(0, 187, 255, 0.342);
@@ -251,9 +251,9 @@ nav .navigation-item_dark a:hover{
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: -3px;
     right: 0;
-    bottom: 0;
+    bottom: -4px;
     
     border-left: 3px solid rgba(0, 187, 255, 0.342);
     border-bottom: 4px solid rgba(0, 187, 255, 0.342);
@@ -427,7 +427,7 @@ footer{
         max-width: 200em;
     }
 }
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 820px) {
     .fractional-background{
         min-height: 220em;
         max-height: 370em;
@@ -435,7 +435,7 @@ footer{
         max-width: 200em;
     }
     .layout-container{
-        max-width: 768px;
+        max-width: 820px;
         min-width: 350px;
         min-height: 100vh;
         display: flex;
@@ -450,7 +450,7 @@ footer{
         max-width: 200em;
     }
     .layout-container_dark{ /* dark mode */
-        max-width: 768px;
+        max-width: 820px;
         min-width: 350px;
         min-height: 100vh;
         display: flex;
@@ -472,11 +472,16 @@ footer{
         flex-direction: column; 
     }
     .contact{
+        display: flex;
+        align-self: center;
         position: relative;
         min-width: 310px;
         max-width: 340px; 
+
     }
     .contact_dark{
+        display: flex;
+        align-self: center;
         position: relative;
         min-width: 310px;
         max-width: 340px; 
