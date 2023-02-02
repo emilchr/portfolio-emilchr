@@ -358,11 +358,12 @@ details > summary{
     cursor: pointer;
 }
 details > summary::before {
-    content: url(./images/right.png);
-
+    content: "+";
+    font-size: 1.25em;
 }
 details[open] > summary::before {
-    content: url(./images/down.png);
+    content: "-";
+    font-size: 1.25em;
 }
 .projects-container img {
     width: 90%;
