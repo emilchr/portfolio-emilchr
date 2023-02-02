@@ -55,7 +55,7 @@ if (dateToday.getMonth() <= birthday.getMonth() && dateToday.getDate() <= birthd
 }
 
 document.getElementById('years-old').innerHTML = age; // Prints age to index.html
-
+contactModal.style.display === 'none'
 
 // Contact modal
 const contactPopUp = () => { // shows or hides contact modal
@@ -68,6 +68,7 @@ const contactPopUp = () => { // shows or hides contact modal
         contactButton.style.borderLeft = "3px solid var(--background-color)";
         contactButton.style.borderBottom = "4px solid var(--background-color)";
     }
+    
 }
 
 const contactPopUpIsTrue = () =>{
