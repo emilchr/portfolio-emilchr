@@ -81,7 +81,7 @@ const contactPopUpIsTrue = () =>{
     }
 }
 contactButton.addEventListener('click', contactPopUp);
-aboutButton.addEventListener('click', contactPopUpIsTrue);
+// aboutButton.addEventListener('click', contactPopUpIsTrue);
 
 const colorPicture = () => {
     profilePic.src = "./resources/images/emilbilde.png"
