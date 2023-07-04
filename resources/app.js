@@ -12,6 +12,7 @@ let contactButton = document.getElementById('contact-button');
 let aboutButton = document.getElementById('about-button');
 let toggleButton = document.getElementById('toggle');
 
+
 checkbox.checked = false; // resets checkbox each refresh
 
 let i;
@@ -61,27 +62,25 @@ contactModal.style.display === 'none';
 
 // Contact modal
 const contactPopUp = () => { // shows or hides contact modal
+    
     if(contactModal.style.display === 'none'){
+
         contactModal.style.display = 'block';
         contactButton.style.borderLeft = "3px solid rgba(0, 187, 255, 0.342)";
-        contactButton.style.borderBottom = "4px solid rgba(0, 187, 255, 0.342)";
-    } else{
+        contactButton.style.borderBottom = "4px solid rgba(0, 187, 255, 0.342)";     
+        
+    } else {
+
         contactModal.style.display = 'none';
         contactButton.style.borderLeft = "3px solid var(--background-color)";
         contactButton.style.borderBottom = "4px solid var(--background-color)";
+
     }
     
 }
 
-const contactPopUpIsTrue = () =>{
-    if (contactPopUp){
-        contactModal.style.display = 'none';
-        contactButton.style.borderLeft = "3px solid var(--background-color)";
-        contactButton.style.borderBottom = "4px solid var(--background-color)";
-    }
-}
+
 contactButton.addEventListener('click', contactPopUp);
-// aboutButton.addEventListener('click', contactPopUpIsTrue);
 
 const colorPicture = () => {
     profilePic.src = "./resources/images/emilbilde.png"
