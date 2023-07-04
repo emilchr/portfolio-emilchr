@@ -141,6 +141,7 @@ h3{
     row-gap: 1em;
     background: linear-gradient(140deg, rgba(2,0,36,0) 38%, rgb(0, 189, 255) 100%);
     color: rgb(35, 35, 35);
+    z-index: 1;
 }
 .layout-container_dark{/* dark mode*/
     position: relative;
@@ -176,7 +177,6 @@ nav{
     display: grid;
     align-items: center;
     justify-items: center;
-    
 }
 nav .navigation-items{
     margin: 0.25em;

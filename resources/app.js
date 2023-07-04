@@ -62,12 +62,16 @@ contactModal.style.display === 'none';
 
 // Contact modal
 const contactPopUp = () => { // shows or hides contact modal
-    
+
     if(contactModal.style.display === 'none'){
 
         contactModal.style.display = 'block';
         contactButton.style.borderLeft = "3px solid rgba(0, 187, 255, 0.342)";
-        contactButton.style.borderBottom = "4px solid rgba(0, 187, 255, 0.342)";     
+        contactButton.style.borderBottom = "4px solid rgba(0, 187, 255, 0.342)";  
+        
+        if (contactModal.style.display === 'block'){
+            //layoutContainer.addEventListener('click', () => {contactModal.style.display = 'none'});
+        }
         
     } else {
 
@@ -78,9 +82,11 @@ const contactPopUp = () => { // shows or hides contact modal
     }
     
 }
-
-
 contactButton.addEventListener('click', contactPopUp);
+
+
+
+
 
 const colorPicture = () => {
     profilePic.src = "./resources/images/emilbilde.png"
