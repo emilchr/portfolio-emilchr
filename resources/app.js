@@ -17,7 +17,7 @@ checkbox.checked = false; // resets checkbox each refresh
 
 let i;
 const darkMode = () => {
-    if (checkbox.checked === true){
+    if (checkbox.checked === true) {
         fractionalBackground.className = 'fractional-background_dark';
         toggleMode.className = 'toggle-mode_dark';
         layoutContainer.className = 'layout-container_dark dark_text';
@@ -29,7 +29,7 @@ const darkMode = () => {
         };
         i++
         
-    } else{
+    } else {
         fractionalBackground.className = 'fractional-background';
         toggleMode.className = 'toggle-mode';
         layoutContainer.className = 'layout-container';
@@ -58,35 +58,26 @@ if (dateToday.getMonth() <= birthday.getMonth() && dateToday.getDate() <= birthd
 }
 
 document.getElementById('years-old').innerHTML = age; // Prints age to index.html
-contactModal.style.display === 'none';
+//contactModal.style.display === 'none';
 
 // Contact modal
 const contactPopUp = () => { // shows or hides contact modal
 
-    if(contactModal.style.display === 'none'){
+    contactModal.classList.toggle('show')
+    contactButton.classList.toggle('button-on')
 
-        contactModal.style.display = 'block';
-        contactButton.style.borderLeft = "3px solid rgba(0, 187, 255, 0.342)";
-        contactButton.style.borderBottom = "4px solid rgba(0, 187, 255, 0.342)";  
-        
-        if (contactModal.style.display === 'block'){
-            //layoutContainer.addEventListener('click', () => {contactModal.style.display = 'none'});
-        }
-        
-    } else {
-
-        contactModal.style.display = 'none';
-        contactButton.style.borderLeft = "3px solid var(--background-color)";
-        contactButton.style.borderBottom = "4px solid var(--background-color)";
-
-    }
-    
 }
+
 contactButton.addEventListener('click', contactPopUp);
 
-
-
-
+window.onclick = (event) => {
+    if (!event.target.matches('.navigation-item')){
+        if (contactModal.classList.contains('show')) {
+            contactModal.classList.remove('show');
+            contactButton.classList.remove('button-on')
+        }
+    }
+}
 
 const colorPicture = () => {
     profilePic.src = "./resources/images/emilbilde.png"

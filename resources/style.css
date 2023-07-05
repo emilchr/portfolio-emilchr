@@ -201,7 +201,14 @@ nav .navigation-item{
     border-left: 3px solid var(--background-color);
     border-bottom: 4px solid var(--background-color);
 
+    cursor: pointer;
+
     --background-color: rgb(247, 247, 247);
+}
+
+.button-on {
+    border-left: 3px solid rgba(0, 187, 255, 0.342) !important;
+    border-bottom: 4px solid rgba(0, 187, 255, 0.342) !important; 
 }
 .navigation-item::before{
     content: "";
@@ -272,6 +279,10 @@ nav .navigation-item_dark a:hover{
 .navigation-item_dark:active::before{/* dark mode*/
     transform: scaleX(1);
     
+}
+
+.show {
+    display: block !important;
 }
 /* Main content*/
 main{
