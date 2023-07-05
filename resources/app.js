@@ -58,7 +58,6 @@ if (dateToday.getMonth() <= birthday.getMonth() && dateToday.getDate() <= birthd
 }
 
 document.getElementById('years-old').innerHTML = age; // Prints age to index.html
-//contactModal.style.display === 'none';
 
 // Contact modal
 const contactPopUp = () => { // shows or hides contact modal
@@ -70,6 +69,7 @@ const contactPopUp = () => { // shows or hides contact modal
 
 contactButton.addEventListener('click', contactPopUp);
 
+// listens to the window and closes modal if clicks happen in the window but not on the button
 window.onclick = (event) => {
     if (!event.target.matches('.navigation-item')){
         if (contactModal.classList.contains('show')) {
@@ -78,6 +78,9 @@ window.onclick = (event) => {
         }
     }
 }
+
+// disables event listener on the contact modal
+contactModal.addEventListener('click', event => event.stopPropagation())
 
 const colorPicture = () => {
     profilePic.src = "./resources/images/emilbilde.png"
