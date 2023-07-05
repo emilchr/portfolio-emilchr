@@ -71,7 +71,7 @@ contactButton.addEventListener('click', contactPopUp);
 
 // listens to the window and closes modal if clicks happen in the window but not on the button
 window.onclick = (event) => {
-    if (!event.target.matches('.navigation-item')){
+    if (!event.target.matches('#contact-button')){
         if (contactModal.classList.contains('show')) {
             contactModal.classList.remove('show');
             contactButton.classList.remove('button-on')

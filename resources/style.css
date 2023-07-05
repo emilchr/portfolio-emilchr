@@ -172,6 +172,12 @@ header{
     min-width: 100%;
 }
 /* Navigation */
+
+.button-on {
+    border-left: 3px solid rgba(0, 187, 255, 0.342) !important;
+    border-bottom: 4px solid rgba(0, 187, 255, 0.342) !important; 
+}
+
 nav{
     margin-top: 1em;
     display: grid;
@@ -206,10 +212,7 @@ nav .navigation-item{
     --background-color: rgb(247, 247, 247);
 }
 
-.button-on {
-    border-left: 3px solid rgba(0, 187, 255, 0.342) !important;
-    border-bottom: 4px solid rgba(0, 187, 255, 0.342) !important; 
-}
+
 .navigation-item::before{
     content: "";
     position: absolute;
@@ -248,13 +251,15 @@ nav .navigation-item_dark{/* dark mode*/
     border-left: 3px solid var(--background-color);
     border-bottom: 4px solid var(--background-color);
 
+    cursor: pointer;
+
     --background-color: rgb(44, 44, 44);/* dark mode*/
 }
-nav .navigation-item_dark a{/* dark mode*/
+nav .navigation-item_dark{/* dark mode*/
     text-decoration: none;
     color: rgb(235, 235, 235);/* dark mode*/
 }
-nav .navigation-item_dark a:hover{
+nav .navigation-item_dark:hover{
     color: rgb(235, 235, 235);
 }
 .navigation-item_dark::before{/* dark mode*/
@@ -506,7 +511,7 @@ footer{
         flex-direction: column; 
     }
     .contact{
-        display: flex;
+        display: none;
         align-self: center;
         position: relative;
         min-width: 310px;
@@ -514,7 +519,7 @@ footer{
 
     }
     .contact_dark{
-        display: flex;
+        display: none;
         align-self: center;
         position: relative;
         min-width: 310px;
